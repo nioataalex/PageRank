@@ -1,0 +1,44 @@
+Nioata Alexandra 312CA
+
+Tema 1 MN
+PageRank
+
+Tema consta in implementarea mai multor functii, pe care le voi explica ulterior. De asemenea, la fiecare functie exista comentarii ajutatoare.
+
+1. Iterative
+- am citit din fisier valorile si am initializat niste matrice
+- am format matricea de adiacenta
+- cream matricele si vectorul de PageRank-uri
+- verificam cand se atinge convergenta(diferenta absoluta dintre R si R anterior < eps dat ca parametru)
+- se returneaza R_last
+
+2. Algebraic
+- am citit din fisier valorile si am initializat niste matrice
+- am format matricea de adiacenta
+- calculam R folosind formula data in enunt cu ajutorul functiei PR_Inv
+
+3. PageRank
+- am deschis fisierul
+- am citit din fisier
+- se formeaza si se deschide fisierul cu extensia ".out"
+- apelam cele 2 functii Iterative si Algebraic si calculam R1 si R2
+- apoi le vom scrie in fisierul de output
+- se va face un clasament al celor mai importante pagini
+- se ordoneaza descrescator R2
+- se calculeaza numărul paginii care a obţinut acest loc, si gradul de apartenenta a acestei pagini
+- se vor scrie in fisierul de output sub urmatoarea forma:
+~ indicele din vectorul sortat
+~ nodul al carui Page-Rank este indicele de vector
+~ gradul de apartenenta
+
+4. Apartenta
+- daca x e cuprins intre 0 si val1  y = 0
+- daca x e cuprins intre val2 si 1 y = 1 
+- a si b coeficientii functiei membru astfel incat functia sa fie continua
+- daca x este cuprins intre val1 si val2 y = a*x + b 
+
+5. PR_Inv
+- folosimt algoritmul Gram-Schimdt si rezolvam sistemul superior triunghiular pentru a calcula inversa matricei
+
+6. Gram_Schimdt
+- algoritmul Gram-Schimdt
